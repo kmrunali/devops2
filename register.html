@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Body background image */
+        body {
+            background-image: url('https://previews.123rf.com/images/decorwithme/decorwithme1711/decorwithme171100164/90220804-heureuse-famille-aime-faire-du-shopping-illustration-de-personnages-dessin%C3%A9s-personnages-isol%C3%A9s.jpg');
+            background-size: 30%; /* Adjust this value to make the image smaller */
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Container styles */
+        .container {
+            width: 35%; /* Reduce width as needed */
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+            padding: 20px; /* Adjust padding */
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Form styles */
+        form {
+            text-align: left; /* Align text left */
+        }
+
+        /* Heading styles */
+        h1 {
+            font-size: 1.2rem; /* Adjust font size */
+            margin-bottom: 15px;
+        }
+
+        /* Label styles */
+        .form-label {
+            font-size: 0.9rem; /* Adjust font size */
+            margin-bottom: 5px;
+        }
+
+        /* Input styles */
+        .form-control {
+            font-size: 0.9rem; /* Adjust font size */
+            padding: 5px; /* Adjust padding */
+        }
+
+        /* Button styles */
+        button {
+            font-size: 0.9rem; /* Adjust font size */
+            padding: 8px 12px; /* Adjust padding */
+        }
+
+        /* Progress bar styles */
+        .progress {
+            height: 8px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Register</h1>
+        <form id="register-form" class="col-md-12 mx-auto">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+                <div id="password-progress" class="progress mt-2">
+                    <div class="progress-bar" role="progressbar" style="width: 0%;"></div>
+                </div>
+                <small class="form-text text-muted">Password must be at least 8 characters long and include uppercase, lowercase, numbers, and symbols.</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="confirm-password" class="form-label">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm">Register</button>
+        </form>
+        <div id="message" class="text-center mt-3"></div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>
